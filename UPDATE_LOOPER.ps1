@@ -31,5 +31,5 @@ while ($true) {
         Write-Output "performing update"
         Do-Update
     }
-    Start-Sleep -Seconds 60
+    Start-Sleep -Seconds 300
 }
