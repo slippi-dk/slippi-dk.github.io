@@ -3,9 +3,7 @@ const fs = require('fs').promises;
 const csv = require('csvtojson');
 
 const csvUrl = (
-  "https://docs.google.com/spreadsheets/d" + 
-  "/1R9H28_XBZjP7BhdHVMNwi5xdFkFSo2XwkOe2X05tifo" +
-  "/export?format=csv"
+  "https://docs.google.com/spreadsheets/d/1eRMYvTEBHDe5y5yYBn3gUYHD9Tr2dcMNccLCTaC0xEo/export?format=csv"
 );
 
 let nodeFetch;
