@@ -403,6 +403,24 @@
         const players = Object.values(data)
           .filter(p => p.getConnectCode)
           .filter(p => !isBanned(p.getConnectCode.user.connectCode.code))
+          .filter(p => {
+            let dkGames = 0;
+            let totalGames = 0;
+            for (const { character, gameCount } of p.getConnectCode.user.rankedNetplayProfile.characters) {
+              totalGames += gameCount;
+              if (character === "DONKEY_KONG") {
+                dkGames += gameCount;
+              }
+              if (totalGames === 0) {
+                // edge case if someone hasn't played any games yet
+                // change this to false if you want them to not show
+                // up if they haven't played games yet
+                return true;
+              }
+              // can just change this to 0 if you want it to be any dk games at all
+              return (dkGames / totalGames) >= 0.5;
+            }
+          })
           .map(p => {
             const user = p.getConnectCode.user;
             const wins = user.rankedNetplayProfile.wins || 0;
