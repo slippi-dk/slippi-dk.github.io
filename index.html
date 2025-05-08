@@ -286,25 +286,25 @@
         table td:first-child {
           padding: 0 10px;
         }
-        .dkbanner {
-          max-width: 99%;
+      }
+      @media screen and (max-width: 700px) {
+        .subheader {
+          display: flex;
+          flex-direction: column;
+        }
+        #updatedAt {
+          margin-bottom: 3vw;
+        }
+        #form-button {
+          margin-bottom: 2vw;
         }
         .dktitle {
           text-align: center;
-          font-size: 14vw;
-          margin-top: -2vw;
+          font-size: 7vw;
+          margin-top: -1vw;
         }
-        #form-button {
-          margin-top: 3vw;
-          margin-bottom: 4vw;
-        }
-      }
-      @media screen and (max-width: 768px) {
-        .subheader {
-          grid-template-columns: 0fr 2fr 1fr;
-        }
-        #updatedAt {
-          justify-self: start;
+        .dkbanner {
+          max-width: 98%;
         }
       }
       @media screen and (max-width: 480px) {
@@ -314,16 +314,15 @@
         .edge {
           max-width: 150px;
         }
+        #updatedAt {
+          margin-bottom: 5vw;
+          font-size: 4.5vw;
+        }
+        #form-button {
+          margin-bottom: 3vw;
+        } 
       }
       @media screen and (max-width: 420px) {
-        .subheader {
-          display: flex;
-          flex-direction: column;
-        }
-        #updatedAt {
-          align-self: center;
-          margin-bottom: 10px;
-        }
         .right-pad {
           padding-right: 10px;
         }
