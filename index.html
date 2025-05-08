@@ -471,9 +471,9 @@
           chars.sort((c1, c2) => c2.gameCount - c1.gameCount);
           const games = chars.reduce((total, { gameCount }) => total + gameCount, 0);
           const freqChars = chars.filter(({ gameCount }) => gameCount > games * 0.02);
-          let toShowChars = freqChars.slice(0, 4);
-          if (toShowChars.length === 4 && chars.length > 4) {
-            toShowChars = freqChars.slice(0, 3);
+          let toShowChars = freqChars.slice(0, 3);
+          if (toShowChars.length === 3 && chars.length > 3) {
+            toShowChars = freqChars.slice(0, 2);
           }
           const charsHtml = toShowChars.map(({ character, gameCount }) => {
             const usage = gameCount / games;
